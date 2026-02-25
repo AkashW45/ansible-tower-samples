@@ -1,0 +1,6 @@
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Execute dynamic commands from Control Plane
+      shell: "{{ item }}"
+      loop: "{{ commands }}"
